@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import { createUseStyles } from 'react-jss';
+import { observer } from 'mobx-react';
 
 const useStyles = createUseStyles({
   myLabel: {
@@ -43,4 +44,4 @@ export const Home = () => {
   );
 };
 
-export default Home;
+export default observer(Home);
