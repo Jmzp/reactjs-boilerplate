@@ -7,6 +7,8 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'prettier',
+    'plugin:react-hooks/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -16,10 +18,9 @@ module.exports = {
     sourceType: 'module',
   },
   parser: 'babel-eslint',
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   rules: {
+    'template-curly-spacing': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/forbid-prop-types': 'off',
     'react/prop-types': 'off',
@@ -29,5 +30,18 @@ module.exports = {
     'import/no-named-as-default': 'off',
     'import/no-named-as-default-member': 'off',
     'no-console': 'warn',
+    'no-unused-vars': 'warn',
+    'import/prefer-default-export': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'lines-between-class-members': 'off',
+    'generator-star-spacing': 'off',
+    'object-curly-newline': 0,
+    'consistent-return': 'warn',
+    'prefer-destructuring': 'warn',
+    'react/function-component-definition': [
+      2,
+      { namedComponents: 'arrow-function' },
+    ],
+    camelcase: 'off',
   },
 };
