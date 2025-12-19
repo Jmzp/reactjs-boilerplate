@@ -10,7 +10,7 @@ class ErrorStore {
     });
   }
 
-  setCurrentError(error) {
+  setCurrentError(error: string): void {
     this.currentError = error;
   }
 }
