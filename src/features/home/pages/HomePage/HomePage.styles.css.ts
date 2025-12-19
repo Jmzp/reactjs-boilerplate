@@ -45,7 +45,7 @@ export const iconContainer = style({
 });
 
 export const title = style({
-  marginBottom: '8px',
+  marginBottom: '12px !important',
   fontWeight: 700,
   background: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
   WebkitBackgroundClip: 'text',
@@ -54,12 +54,12 @@ export const title = style({
 });
 
 export const subtitle = style({
-  marginBottom: '8px',
+  marginBottom: '16px !important',
   color: '#6b7280',
 });
 
 export const email = style({
-  marginBottom: '40px',
+  marginBottom: '32px',
   color: '#1a1a2e',
   fontWeight: 600,
   fontSize: '18px',

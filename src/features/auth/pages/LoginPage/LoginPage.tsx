@@ -74,18 +74,7 @@ const LoginPage = () => {
                 </InputAdornment>
               ),
             }}
-            sx={{
-              '& .MuiOutlinedInput-root': {
-                borderRadius: '12px',
-                backgroundColor: '#f9fafb',
-                '&:hover': {
-                  backgroundColor: '#f3f4f6',
-                },
-                '&.Mui-focused': {
-                  backgroundColor: 'white',
-                },
-              },
-            }}
+            className={styles.textField}
           />
           <TextField
             label="Contraseña"
@@ -116,18 +105,7 @@ const LoginPage = () => {
                 </InputAdornment>
               ),
             }}
-            sx={{
-              '& .MuiOutlinedInput-root': {
-                borderRadius: '12px',
-                backgroundColor: '#f9fafb',
-                '&:hover': {
-                  backgroundColor: '#f3f4f6',
-                },
-                '&.Mui-focused': {
-                  backgroundColor: 'white',
-                },
-              },
-            }}
+            className={styles.textField}
           />
 
           {error && (
@@ -142,22 +120,7 @@ const LoginPage = () => {
             size="large"
             disabled={authStore.isLoading}
             fullWidth
-            sx={{
-              borderRadius: '12px',
-              padding: '14px',
-              fontSize: '16px',
-              fontWeight: 600,
-              textTransform: 'none',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              boxShadow: '0 10px 30px rgba(102, 126, 234, 0.4)',
-              '&:hover': {
-                background: 'linear-gradient(135deg, #5a6fd6 0%, #6a4190 100%)',
-                boxShadow: '0 15px 35px rgba(102, 126, 234, 0.5)',
-              },
-              '&:disabled': {
-                background: '#e5e7eb',
-              },
-            }}
+            className={styles.button}
           >
             {authStore.isLoading ? (
               <CircularProgress size={24} color="inherit" />

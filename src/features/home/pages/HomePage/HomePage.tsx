@@ -31,9 +31,9 @@ const HomePage = () => {
           Has iniciado sesión correctamente
         </Typography>
 
-        <Divider sx={{ my: 3 }} />
+        <Divider sx={{ my: 4 }} />
 
-        <Typography variant="body2" sx={{ color: '#6b7280', mb: 1 }}>
+        <Typography variant="body2" sx={{ color: '#6b7280', mb: 2 }}>
           Sesión activa como:
         </Typography>
         <Typography className={styles.email}>{authStore.user?.email}</Typography>

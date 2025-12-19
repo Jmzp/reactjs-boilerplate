@@ -1,4 +1,4 @@
-import { style, keyframes } from '@vanilla-extract/css';
+import { style, keyframes, globalStyle } from '@vanilla-extract/css';
 
 const fadeIn = keyframes({
   '0%': { opacity: 0, transform: 'translateY(-20px)' },
@@ -50,14 +50,14 @@ export const logo = style({
 });
 
 export const title = style({
-  marginBottom: '8px',
+  marginBottom: '12px',
   textAlign: 'center',
   fontWeight: 700,
   color: '#1a1a2e',
 });
 
 export const subtitle = style({
-  marginBottom: '32px',
+  marginBottom: '40px !important',
   textAlign: 'center',
   color: '#6b7280',
 });
@@ -66,6 +66,40 @@ export const form = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '20px',
+});
+
+export const textField = style({});
+
+globalStyle(`${textField} .MuiOutlinedInput-root`, {
+  borderRadius: '12px !important',
+  backgroundColor: '#f9fafb !important',
+});
+
+globalStyle(`${textField} .MuiOutlinedInput-root:hover`, {
+  backgroundColor: '#f3f4f6 !important',
+});
+
+globalStyle(`${textField} .MuiOutlinedInput-root.Mui-focused`, {
+  backgroundColor: 'white !important',
+});
+
+export const button = style({
+  borderRadius: '12px !important',
+  padding: '14px !important',
+  fontSize: '16px !important',
+  fontWeight: '600 !important',
+  textTransform: 'none !important',
+  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important',
+  boxShadow: '0 10px 30px rgba(102, 126, 234, 0.4) !important',
+});
+
+globalStyle(`${button}:hover:not(:disabled)`, {
+  background: 'linear-gradient(135deg, #5a6fd6 0%, #6a4190 100%) !important',
+  boxShadow: '0 15px 35px rgba(102, 126, 234, 0.5) !important',
+});
+
+globalStyle(`${button}:disabled`, {
+  background: '#e5e7eb !important',
 });
 
 export const inputWrapper = style({
