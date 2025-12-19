@@ -1,9 +1,9 @@
-import { ErrorBoundary } from './components';
-import { Router } from './routes';
+import { ErrorBoundary } from './shared';
+import { AppRoutes } from './app/routes';
 
 export const App = () => (
   <ErrorBoundary>
-    <Router />
+    <AppRoutes />
   </ErrorBoundary>
 );
 

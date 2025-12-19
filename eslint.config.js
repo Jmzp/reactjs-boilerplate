@@ -27,6 +27,10 @@ export default [
         __dirname: 'readonly',
         localStorage: 'readonly',
         sessionStorage: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
       },
     },
     plugins: {
