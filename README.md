@@ -142,6 +142,7 @@ await httpClient.post('/auth/login', { email, password });
 ```
 
 **Features:**
+
 - **Singleton pattern** - Single instance across the app
 - **Automatic token injection** - Reads from localStorage and adds to request headers
 - **Request/Response interceptors** - For logging, error handling, etc.
@@ -168,7 +169,7 @@ Configure the base URL and other options when initializing (optional):
 const client = HttpClient.getInstance({
   baseURL: 'https://api.example.com',
   timeout: 30000,
-  headers: { 'X-Custom-Header': 'value' }
+  headers: { 'X-Custom-Header': 'value' },
 });
 ```
 
