@@ -125,6 +125,53 @@ This boilerplate includes a basic authentication setup:
 
 > Note: The current implementation uses a fake token for demonstration. Replace with your actual authentication logic.
 
+## 🌐 API Client
+
+The boilerplate includes a production-ready HTTP client built on Axios:
+
+```typescript
+import { httpClient } from '@/core/api';
+
+// GET request
+const response = await httpClient.get<User>('/users/me');
+
+// POST request
+await httpClient.post('/auth/login', { email, password });
+
+// Other methods: put, patch, delete
+```
+
+**Features:**
+- **Singleton pattern** - Single instance across the app
+- **Automatic token injection** - Reads from localStorage and adds to request headers
+- **Request/Response interceptors** - For logging, error handling, etc.
+- **Comprehensive error handling** - Network errors, HTTP errors, specific status codes
+- **TypeScript support** - Fully typed responses and errors
+- **Configurable** - Base URL, timeout, and custom headers
+
+**Error Handling:**
+All API errors follow the `ApiError` interface:
+
+```typescript
+interface ApiError {
+  message: string;
+  status: number;
+  code?: string;
+  details?: unknown;
+}
+```
+
+**Configuration:**
+Configure the base URL and other options when initializing (optional):
+
+```typescript
+const client = HttpClient.getInstance({
+  baseURL: 'https://api.example.com',
+  timeout: 30000,
+  headers: { 'X-Custom-Header': 'value' }
+});
+```
+
 ## 🎨 Theming
 
 Material UI theme is configured in `src/index.tsx`:
